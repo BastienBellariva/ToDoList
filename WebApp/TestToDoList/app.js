@@ -1,6 +1,15 @@
 var express = require('express');
 var session = require('cookie-session');
 var bodyParser = require('body-parser');
+var mysql = require('mysql');
+var pool = mysql.createPool({
+	host	:'localhost',
+	user    :'tasks',
+	password:'',
+	database:'ToDoList'
+});
+
+
 var urlencodedParser = bodyParser.urlencoded({ extended: false});
 
 var app = express();
