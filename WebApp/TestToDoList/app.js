@@ -31,7 +31,7 @@ app.use(session({secret: 'maSession'}))
 	if (req.body.newtodo != '') {
 		req.session.todolist.push(req.body.newtodo);
 	}
-	res.redirect('/toDo');
+	res.redirect('/toDo');ggvuhbu
 })
 
 .get('/toDo/delete/:id', function(req, res){
