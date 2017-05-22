@@ -4,12 +4,20 @@
 
     <head>
         <title>Demo</title>
+        <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css"/>
     </head>
 
     <body>
 
-        <h1>Salut les gens</h1>
-        <p><%= test %></p>
+        <h1>MyToDo</h1>
+
+        <form method="post" action="/">
+            <div class="form-group">
+                <label for="">My Task</label>
+                <textarea class="form-control" id="exampleTextarea" rows="3"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
 
     </body>
 
