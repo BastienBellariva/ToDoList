@@ -1,14 +1,20 @@
 var express = require('express');
 var session = require('cookie-session');
 var bodyParser = require('body-parser');
-var mysql = require('mysql');
+var MongoClient = require("mongodb").MongoClient;
+/*var mysql = require('mysql');
 var pool = mysql.createPool({
 	host	:'localhost',
 	user    :'tasks',
 	password:'',
 	database:'ToDoList'
-});
+});*/
 
+MongoClient.connect("mongodb://localhost/tutoriel", function(error, db){
+	if (error) return funcCallback(error);
+
+	console.log("Connecté à la base de données 'tutoriel'");
+})
 
 var urlencodedParser = bodyParser.urlencoded({ extended: false});
 
