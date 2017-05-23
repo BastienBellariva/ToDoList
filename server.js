@@ -1,21 +1,45 @@
-//Appel d'Express
-let express = require('express')
-let app = express()
+//Appel
+let express = require('express') //Express
+let app = express() //Express
+let bodyParser = require('body-parser') //Body-Parser
+let session = require('express-session') //Session
 
-//Appel de EJS
-app.set('view engine', 'ejs')
+//Our Middleware
+app.set('view engine', 'ejs') //EJS
+app.use(bodyParser.urlencoded({ extended: false})) //Body-Parser
+app.use(bodyParser.json()) //Body-Parser
+app.use(session({
+    secret: 'secret',
+    resave: false,
+    saveUninitialized: true,
+    cookie: { secure: false }
+})) //Session
+app.use(require('./middlewares/flash'))
 
-//Appel du CSS
-app.use('/assets', express.static('public'))
+//Template Motor
+app.use('/assets', express.static('public')) //CSS  
 
-//Page d'accueil
+//Our way
+//Home page
 app.get('/', (request, response) => {
-    response.render('pages/index', {test: "Salut"})   
+    let Task = require('./models/task')
+    Task.all(function(tasks){
+        response.render('pages/index', {tasks: tasks}) 
+    })
 })
 
-//Gestion du la task
+//Task management
 app.post('/', (request, response) => {
-    console.log(request)
+    if(request.body.task === undefined || request.body.task === '') {
+        request.flash('error', "Vous n'avez pas entré de tâche")
+        response.redirect('/')
+    } else {
+        let Task = require('./models/task')
+        Task.create(request.body.task, function(){
+            request.flash('success', "Merci !")
+            response.redirect('/')
+        })
+    }
 })
 
-app.listen(8000) 
+app.listen(8080) 
