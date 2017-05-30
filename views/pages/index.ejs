@@ -38,6 +38,20 @@
             <button type="submit" class="btn btn-primary">Submit</button>
         </form>
 
+        <% for (task of tasks) { %>
+        <div class="content">
+            <div class="text-muted">
+                <div class="date"> 
+                    <%= task.date.fromNow() %>
+                </div>
+            </div>
+            <div class="task">
+                <%= task.task %>
+            </div>
+        </div>
+        <% } %>
+       
+
     </body>
 
 </hmtl>
