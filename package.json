@@ -1,27 +1,13 @@
 {
-  "name": "testtodolist",
-  "version": "1.0.0",
-  "description": "Application d'authetification utilisateur",
-  "main": "app.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "Damien Hervieu",
-  "license": "ISC",
-  "dependencies": {
-    "bcryptjs": "*",
-    "body-parser": "*",
-    "connect-flash": "*",
-    "cookie-parser": "^1.4.1",
-    "express": "*",
-    "express-handlebars": "*",
-    "express-messages": "*",
-    "express-session": "*",
-    "express-validator": "*",
-    "mongodb": "*",
-    "mongoose": "*",
-    "passport": "*",
-    "passport-http": "*",
-    "passport-local": "*"
-  }
+    "name": "ma-todolist",
+    "version": "0.1.0",
+    "dependencies": {
+        "express": "~4.11.0",
+        "ejs": "~2.1.4",
+        "cookie-session": "~1.1.0",
+        "body-parser": "~1.10.1",
+        "mongodb": "~2.2.26"
+    },
+    "author": "Un groupe de B2 Ingesup Toulouse",
+    "description": "Un gestionnaire de todolist"
 }
