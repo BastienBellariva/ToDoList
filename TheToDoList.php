@@ -137,13 +137,15 @@
 <div id="myDIV" class="header">
 	
 	<input type="text" id="myInput" placeholder="Your task !">
-	<span onclick="newElement()" class="addBtn">Add</span>
+	<span class="addBtn">Add</span>
 </div>
 
 <ul id="myUL">
-
+    <li>Meet George</li>
+    <li>Buy eggs</li>
 </ul>
 
+<!--
 <script>
     // Create a "close" button and append it to each list item
     var myNodelist = document.getElementsByTagName("LI");
@@ -200,6 +202,7 @@
             }
         }
     }
-</script>
+
+</script> -->
 </body>
 </html>
