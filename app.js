@@ -29,7 +29,6 @@ app.use(cookieParser());
 
 //Setting Static Folder
 app.use(express.static(path.join(__dirname, 'public')));
-//app.use('/assets', express.static('public'));
 
 //Express Session
 app.use(session({
