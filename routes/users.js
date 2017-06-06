@@ -3,7 +3,7 @@ var router = express.Router();
 var passport = require('passport');
 var LocalStrategy = require('passport-local').Strategy;
 
-var User = require('../models/user');
+var User = require('../models/log_register');
 
 //Get register
 router.get('/register', function(req, res) {
@@ -13,6 +13,8 @@ router.get('/register', function(req, res) {
 //Get login
 router.get('/login', function(req, res) {
 	res.render('login');
+	var success_msg = null;
+	console.log(success_msg);
 });
 
 //Register user
@@ -74,18 +76,15 @@ passport.use(new LocalStrategy(
     		}
     	});
     });
-    console.log('Authenticated');
   }));
 
 passport.serializeUser(function(user, done) {
   done(null, user.id);
-  console.log('Serialized User');
 });
 
 passport.deserializeUser(function(id, done) {
   User.getUserById(id, function(err, user) {
     done(err, user);
-    console.log('Deserialized User');
   });
 });
 
