@@ -42,4 +42,14 @@ app.post('/', (request, response) => {
     }
 })
 
+app.get('/delete/:id', (request, response) => {
+    if(request.params.id != '' && request.params.id != undefined) {
+        let Task = require('./models/task')
+        Task.delete(request.params.id, function(){
+            response.redirect('/')
+        })
+    }
+    
+})
+
 app.listen(8080) 

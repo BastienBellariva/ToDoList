@@ -34,6 +34,13 @@ class Task {
         })
     }
 
+    static delete(id, cb) {
+        connection.query('DELETE FROM tasks WHERE id = ?', [id], (err, result) => {
+            if (err) throw err
+            cb(result)
+        })
+    }
+
 }
 
 module.exports = Task
