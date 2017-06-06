@@ -35,8 +35,11 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(session({
 	secret: 'secret',
 	saveUninitialized: true,
-	resave: true
+	resave: true,
+    cookie: { secure: false }
 }));
+
+app.use(require('./middlewares/flash'));
 
 //Passport Initialization
 app.use(passport.initialize());
