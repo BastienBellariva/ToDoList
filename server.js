@@ -52,4 +52,8 @@ app.get('/delete/:id', (request, response) => {
     
 })
 
+app.get('/index2', (request, response) => {
+    response.render('./pages/index2')
+})
+
 app.listen(8080) 
