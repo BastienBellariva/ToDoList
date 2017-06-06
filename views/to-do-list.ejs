@@ -174,14 +174,19 @@
 </div>
 
 <div id="myDIV" class="header">
-	
-	<input type="text" id="myInput" placeholder="Your task !">
-	<span class="addBtn">Add</span>
+	<form method="post" action="/to-do-list">
+        <input type="text" name="task" class="form-control" id="exampleTextarea" rows="3" placeholder="Ma tâche"></textarea>
+        <span class="addBtn"><button type="submit" class="btn btn-primary">Ajouter</button></span>
+    </form>
 </div>
 
 <ul id="myUL">
-    <li>Meet George</li>
-    <li>Buy eggs</li>
+    <% for (task of tasks) { %>
+            <!-- <%= task.date.fromNow() %> -->
+            <li>
+                <%= task.task %><a href="/to-do-list/delete/<%= task.id %>">✘</a>
+            </li>
+    <% } %>
 </ul>
 
 <!--
