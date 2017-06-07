@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Client :  127.0.0.1
--- Généré le :  Mer 07 Juin 2017 à 17:24
+-- Généré le :  Mer 07 Juin 2017 à 17:34
 -- Version du serveur :  5.7.14
 -- Version de PHP :  5.6.25
 
@@ -31,15 +31,6 @@ CREATE TABLE `tasks` (
   `task` varchar(255) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   `date` date NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
-
---
--- Contenu de la table `tasks`
---
-
-INSERT INTO `tasks` (`id`, `task`, `date`) VALUES
-(22, 'jsqdlijsqljdl', '2017-06-07'),
-(20, 'ksdqkdsqkljdsqjklsqdjklsdq', '2017-06-07'),
-(21, 'ljdskljqdljdls', '2017-06-07');
 
 --
 -- Index pour les tables exportées
