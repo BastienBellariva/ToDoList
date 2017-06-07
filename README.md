@@ -5,8 +5,12 @@ Pour faire fonctionner l'application :
 
 Lancer mongod.exe
 Créer la base "loginapp" par la commande "use loginapp" ou 
-faire sa propre base de données tout en changeant dans le fichier app.js, à la ligne 12, la base de données utilisée : 
+faire sa propre base de données en changeant, dans le fichier app.js, à la ligne 12, la base de données utilisée : 
 "mongoose.connect('mongodb://localhost/*nom de la base de données*');"
+
+Importer le fichier s'appelant todolist.sql se trouvant dans le fichier config
+
+OU
 
 Créer la base de données MySQL s'appelant "todolist"
 Créer une table s'appelant "tasks" avec comme structure 3 colonnes :
@@ -27,7 +31,7 @@ Fonctionnalités intégrées :
 - Enregistrement de l'utilisateur
 - Sauvegarde des utilisateurs dans une base NoSQL
 - Enregistrement des tâches dans une base de données
-
+- Suppression des tâches dans la base de données
 
 Fonctionnalités manquantes :
 - Automatisation de l'installation du projet (déploiement)
