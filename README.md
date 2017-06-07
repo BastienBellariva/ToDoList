@@ -5,7 +5,7 @@ Pour faire fonctionner l'application :
 
 Lancer mongod.exe
 Créer la base "loginapp" par la commande "use loginapp" ou 
-faire sa propre base de données tout en changeant dans le fichier app.js à la ligne 12 la base de données utilisée : 
+faire sa propre base de données tout en changeant dans le fichier app.js, à la ligne 12, la base de données utilisée : 
 "mongoose.connect('mongodb://localhost/*nom de la base de données*');"
 
 Créer la base de données MySQL s'appelant "todolist"
@@ -34,3 +34,10 @@ Fonctionnalités manquantes :
 - Lien entre la liste de tâches et l'utilisateur
 - Partage de liste avec d'autres utilisateurs
 - Salle de chat
+
+
+Ce que l'on a retenu de ce projet :
+Toutes les fonctionnalités n'étant pas présentes, nous avons appris de nos erreurs pendant ce projet.
+Le côté managérial n'était pas du tout au point et nous aurions vraiment du travailler en équipe et faire un compte rendu plus souvent.
+La disposition du groupe dans la classe n'était pas bonne et le manque de communication n'a pas aidé au bon déroulement du projet.
+La répartition des tâches était inégale ce qui fait que l'application n'intègre pas toute les fonctionnalités demandées.
